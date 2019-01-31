@@ -2,6 +2,14 @@ var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var li = document.querySelector("li");
+var ele = document.getElementsByClassName("listelement");
+
+var ul1 = document.getElementById("list");
+var li1 = document.createElement("li");
+
+
+
+
 
 //Finding Length of Input
 function inputLength() {
@@ -17,11 +25,15 @@ function createListElement() {
 }
 
 //Striking Through Item When Clicked Om
-function underlineParent(event){
-	event.target.parentNode.classList.toggle("done");
-}
+li1.appendChild(document.createTextNode("Four"));
+var button = document.createElement("button");
+button.innerHTML = "Delete";
+li1.appendChild(button);
+li1.setAttribute("id","element4");
+ul1.appendChild(li1);
 
 
+//
 function addListAfterClick() {
 	if (inputLength() > 0) {
 		createListElement();
